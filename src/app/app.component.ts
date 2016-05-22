@@ -1,3 +1,5 @@
+
+
 /*
  * Angular 2 decorators and services
  */
@@ -8,6 +10,7 @@ import { AppState } from './app.service';
 import { Home } from './home';
 import { RouterActive } from './router-active';
 
+
 /*
  * App Component
  * Top Level Component
@@ -16,9 +19,14 @@ import { RouterActive } from './router-active';
   selector: 'app',
   pipes: [ ],
   providers: [ ],
-  directives: [ RouterActive ],
+  directives: [ RouterActive],
   encapsulation: ViewEncapsulation.None,
-  styles: [require('./app.scss')],
+  styles: [
+    require('primeui/themes/delta/theme.css'),
+    require('primeui/primeui-ng-all.min.css'),
+    require('quill/dist/quill.snow.css'),
+    require('./app.scss')
+  ],
   template: require('./app.html')
 })
 @RouteConfig([
@@ -28,7 +36,7 @@ import { RouterActive } from './router-active';
   { path: '/about', name: 'About', loader: () => require('es6-promise!./about')('About') }
 ])
 export class App {
-
+  name = 'Webpack mix';
   loading = false;
 
 

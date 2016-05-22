@@ -96,7 +96,7 @@ module.exports = {
    * See: http://webpack.github.io/docs/configuration.html#module
    */
   module: {
-
+    noParse: /node_modules\/quill/,
     /*
      * An array of applied pre and post loaders.
      *
@@ -125,6 +125,8 @@ module.exports = {
           helpers.root('node_modules/rxjs'),
           helpers.root('node_modules/@angular2-material'),
           helpers.root('node_modules/@angular'),
+          helpers.root('node_modules/primeng'),
+           helpers.root('node_modules/quill')
         ]
       }
 
@@ -185,7 +187,9 @@ module.exports = {
       {
         test: /\.scss$/,
         loaders: ['raw-loader', 'sass']
-      }
+      },
+      { test: /\.woff(2)?(\?v=[0-9]\.[0-9]\.[0-9])?$/, loader: "url-loader?limit=10000&minetype=application/font-woff" },
+      { test: /\.(ttf|eot|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/, loader: "file-loader" }
 
     ]
 

@@ -28,6 +28,16 @@ import '@angular2-material/progress-circle';
 import '@angular2-material/toolbar';
 // look in src/platform/angular2-material2 and src/platform/providers
 
+
+// Font-awesome
+require('font-awesome-webpack');
+// Primeng
+require('es6-promise!primeui/primeui-ng-all.min.js');
+// Quill
+require('es6-promise!quill/index.js');
+// Chart.js
+require('es6-promise!chart.js/Chart.min.js');
+
 if ('production' === ENV) {
   // Production
 

@@ -5,6 +5,21 @@
     <pre>npm run start:hmr</pre>
   </md-card>
   <md-card>
+    Primeng and font-awesome-webpack
+  <p-splitButton label="Save" icon="fa-check" (onClick)="save()">
+    <p-splitButtonItem icon="fa-close" label="Delete" (onClick)="delete()"></p-splitButtonItem>
+    <p-splitButtonItem icon="fa-refresh" label="Update" (onClick)="update()"></p-splitButtonItem>
+    <p-splitButtonItem icon="fa-link" label="Angular.io" url="http://angular.io"></p-splitButtonItem>
+    <p-splitButtonItem icon="fa-paint-brush" label="Theming" ></p-splitButtonItem>
+</p-splitButton>
+  </md-card>
+   <md-card>
+    Static Material fonts (assets/font)
+   <button md-fab color="primary">
+      <md-icon class="md-24">home</md-icon>
+    </button>
+  </md-card>
+  <md-card>
     <md-card-title>Local State</md-card-title>
     <md-card-content>
 
@@ -18,9 +33,7 @@
         </md-input>
 
         <button md-raised-button color="primary">Submit Value</button>
-        <button md-fab color="primary">
-      <md-icon class="md-24">home</md-icon>
-    </button>
+
       </form>
       <!--
         <input type="text" [value]="localState.value" (input)="localState.value = $event.target.value" autofocus>
@@ -33,5 +46,6 @@
 
     </md-card-content>
   </md-card>
+
 
 </div>
